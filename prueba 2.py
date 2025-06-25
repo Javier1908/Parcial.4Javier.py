@@ -53,3 +53,29 @@ def cancelar_compra(compradores):
     else:
         print("El comprador no se encuentra, no se puede cancelar la compra.")
 
+def main():
+    compradores = {}
+
+    while True:
+        print("\n--- MENÚ PRINCIPAL ---")
+        print("1.- Comprar entrada.")
+        print("2.- Consultar comprador.")
+        print("3.- Cancelar compra.")
+        print("4.- Salir.")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            comprar_entrada(compradores)
+        elif opcion == "2":
+            consultar_comprador(compradores)
+        elif opcion == "3":
+            cancelar_compra(compradores)
+        elif opcion == "4":
+            print("Saliendo del programa. ¡Hasta pronto!")
+            break
+        else:
+            print("Opción inválida. Por favor, seleccione una opción del 1 al 4.")
+
+if __name__ == "__main__":
+    main()
